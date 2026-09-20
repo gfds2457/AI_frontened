@@ -1,0 +1,11 @@
+node_modules/
+.front/setting.json
+
+# Python 虚拟环境与字节码
+**/.venv/
+**/__pycache__/
+*.pyc
+.aider*
+
+#所有Claude相关文件
+Claude_complete/

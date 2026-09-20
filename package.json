@@ -1,0 +1,67 @@
+{
+  "name": "ai-frontend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "smoke": "node test/smoke.mjs",
+    "test:input": "node test/input-flow.mjs",
+    "test:overlay": "node test/design-overlay.mjs",
+    "test:unit": "vitest run",
+    "verify:tui": "node test/tui-live-select.mjs",
+    "verify:crew": "node test/crew-live.mjs",
+    "verify:front": "node test/front-live.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "image/README/调试代码.png",
+    "image/README/设计图生成.png",
+    "image/README/终端对话界面.png",
+    "python-fastapi/**/*.py",
+    "!python-fastapi/.venv/**",
+    "python-fastapi/config/**/*",
+    "python-fastapi/requirements.txt",
+    "skills/**/*",
+    "src/**/*",
+    "app.js",
+    "config.js",
+    "README.md"
+  ],
+  "bin": {
+    "front": "./app.js"
+  },
+  "keywords": [
+    "cli",
+    "ai",
+    "ui-design",
+    "frontend"
+  ],
+  "author": "LBB",
+  "license": "MIT",
+  "description": "AI前端编程助手",
+  "dependencies": {
+    "@lancedb/lancedb": "^0.37.1",
+    "@langchain/core": "^1.2.9",
+    "@langchain/mcp-adapters": "^1.1.4",
+    "@langchain/openai": "^1.5.11",
+    "@langchain/textsplitters": "^1.0.1",
+    "@vscode/ripgrep": "^1.18.0",
+    "ansi-escapes": "^7.3.0",
+    "chalk": "^5.6.2",
+    "express": "^5.2.1",
+    "glob": "^13.0.6",
+    "mammoth": "^1.12.2",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "minimatch": "^10.2.6",
+    "sharp": "^0.35.4",
+    "string-width": "^8.2.2",
+    "xlsx": "^0.18.5",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^5.0.1",
+    "vitest": "^5.0.1"
+  }
+}
